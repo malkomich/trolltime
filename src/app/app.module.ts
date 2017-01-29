@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { GifComponent } from './gif.component';
+import { PpapComponent } from './gifs/ppap/ppap.component';
+import { BenderComponent } from './gifs/bender/bender.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GifComponent
+    GifComponent,
+    PpapComponent,
+    BenderComponent
   ],
   imports: [
     BrowserModule,

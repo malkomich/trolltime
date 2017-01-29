@@ -3,56 +3,8 @@
     {{gif.name}} GIF!
   </h2>
 
-  <div class="animation">
-    <div class="pen _1"></div>
-    <div class="pen _2"></div>
-    <div class="apple">
-      <div class="juice"></div>
-      <div class="juice"></div>
-    </div>
-    <div class="pineapple">
-      <div class="juice"></div>
-      <div class="juice"></div>
-    </div>
-  </div>
-  <div class="title-container">
-    <div class="title">I have a pen</div>
-  </div>
-  <div class="title-container">
-    <div class="title">I have an apple</div>
-  </div>
-  <div class="title-container">
-    <div class="title">Uh!</div>
-  </div>
-  <div class="title-container">
-    <div class="title">Apple pen!</div>
-  </div>
-  <div class="title-container">
-    <div class="title">I have a pen</div>
-  </div>
-  <div class="title-container">
-    <div class="title">I have pineapple</div>
-  </div>
-  <div class="title-container">
-    <div class="title">Uh!</div>
-  </div>
-  <div class="title-container">
-    <div class="title">Pineapple pen!</div>
-  </div>
-  <div class="title-container">
-    <div class="title">Apple pen!</div>
-  </div>
-  <div class="title-container">
-    <div class="title">Pineapple pen!</div>
-  </div>
-  <div class="title-container">
-    <div class="title">Uh!</div>
-  </div>
-  <div class="title-container">
-    <div class="title">Pen-pineapple-apple-pen!</div>
-  </div>
-  <form action="">
-    <button type="submit">Replay</button>
-  </form>
+  <gif-ppap *ngIf="gif.id === 1"></gif-ppap>
+
+  <gif-bender *ngIf="gif.id === 2"></gif-bender>
 
 </div>

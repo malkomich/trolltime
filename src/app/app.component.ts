@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { Gif } from './gif';
 
 const GIFS: Gif[] = [
-  { id: 1, name: 'PPAP' }
+  { id: 1, name: 'PPAP' },
+  { id: 2, name: 'Bender' }
 ];
 
 @Component({
