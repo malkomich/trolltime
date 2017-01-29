@@ -1,3 +1,11 @@
 <h1>
   {{title}}
 </h1>
+
+<ul class="gifs">
+  <li *ngFor="let gif of gifs" (click)="onSelect(gif)" [class.selected]="gif === selectedGif">
+    <span class="badge">{{gif.id}}</span> {{gif.name}}
+  </li>
+</ul>
+
+<my-gif [gif]="selectedGif"></my-gif>

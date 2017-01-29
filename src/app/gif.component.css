@@ -1,0 +1,480 @@
+body {
+  background: #eee;
+  margin: 0;
+}
+
+button {
+  animation: showReplay 1s 21.35 steps(1);
+  background: transparent;
+  border: 2px solid #666;
+  color: #666;
+  display: block;
+  font-family: inherit;
+  font-size: 20pt;
+  line-height: 60px;
+  margin: auto;
+  width: 110px;
+  -webkit-appearance: none;
+}
+button:hover {
+  border-color: #000;
+  color: #000;
+}
+button:active {
+  background: #000;
+  border-color: #000;
+  color: #eee;
+}
+button:focus {
+  outline: 0;
+}
+
+.animation > div, .title-container {
+  position: absolute;
+}
+
+.animation {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  transform-origin: 50% 0;
+}
+
+.title-container {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 4px #000, 0 0 8px #000;
+  top: 75%;
+  visibility: hidden;
+  width: 100%;
+  z-index: 4;
+}
+.title-container:nth-of-type(2) {
+  animation: showHide 1.7s 0s linear;
+}
+.title-container:nth-of-type(3) {
+  animation: showHide 1.2s 1.7s linear;
+}
+.title-container:nth-of-type(4) {
+  animation: showHide 0.9s 4.1s linear;
+}
+.title-container:nth-of-type(5) {
+  animation: showHide 1.2s 5s linear;
+}
+.title-container:nth-of-type(6) {
+  animation: showHide 1.7s 7.05s linear;
+}
+.title-container:nth-of-type(7) {
+  animation: showHide 1.2s 8.75s linear;
+}
+.title-container:nth-of-type(8) {
+  animation: showHide 0.9s 11.15s linear;
+}
+.title-container:nth-of-type(9) {
+  animation: showHide 1.2s 12.05s linear;
+}
+.title-container:nth-of-type(10) {
+  animation: showHide 1.7s 14.1s linear;
+}
+.title-container:nth-of-type(11) {
+  animation: showHide 1.2s 15.8s linear;
+}
+.title-container:nth-of-type(12) {
+  animation: showHide 0.9s 18.4s linear;
+}
+.title-container:nth-of-type(13) {
+  animation: showHide 1.7s 19.3s linear;
+}
+
+.title {
+  font-size: calc(24px + 1.5vw);
+}
+
+.subtitle {
+  font-size: calc(12px + 1.5vw);
+}
+
+.pen {
+  background-image: radial-gradient(14px 50px at 50% 9%, #111111, #111111 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(transparent, transparent 7%, #111 7%, #111 20%, transparent 20%, transparent 60%, #444 60%, #444 87%, transparent 87%, transparent), radial-gradient(18px 60px at 50% 89%, #aaaaaa, #aaaaaa 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
+  left: 50%;
+  margin-left: -10px;
+  top: 30px;
+  width: 20px;
+  height: 260px;
+  z-index: 1;
+}
+.pen::before {
+  background-image: radial-gradient(10px 60px at 50% 10%, #111111, #111111 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), radial-gradient(12px 12px at 50% 38%, #111111, #111111 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(90deg, transparent, transparent 5%, #aaa 5%, #aaa 95%, transparent 95%, transparent);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 40%;
+}
+
+._1 {
+  animation: pen1 21.35s linear forwards;
+}
+
+._2 {
+  animation: pen2 21.35s linear forwards;
+}
+
+.apple {
+  animation: apple 21.35s linear forwards;
+  background-image: linear-gradient(96deg, transparent, transparent 47px, #420 47px, #420 53px, transparent 53px, transparent);
+  background-size: 100% 110px;
+  background-position: 2px 0;
+  background-repeat: no-repeat;
+  left: 50%;
+  margin-left: -50px;
+  top: 90px;
+  width: 100px;
+  height: 115px;
+  z-index: 2;
+}
+.apple::before, .apple::after {
+  background-color: #f44;
+  bottom: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 67%;
+  height: 100px;
+}
+.apple::before {
+  background-image: radial-gradient(15px 15px at 45% 25%, #ffffff, #ffffff 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
+  border-radius: 50% 50% 45% 50%;
+  left: 0;
+  transform: rotate(-5deg);
+}
+.apple::after {
+  border-radius: 50% 50% 50% 45%;
+  right: 0;
+  transform: rotate(5deg);
+}
+
+.pineapple {
+  animation: pineapple 21.35s linear forwards;
+  background-image: radial-gradient(28% 80% at 30% 25%, #006600, #006600 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0)), radial-gradient(28% 80% at 43% 25%, #006600, #006600 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0)), radial-gradient(28% 80% at 57% 25%, #006600, #006600 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0)), radial-gradient(28% 80% at 70% 25%, #006600, #006600 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0));
+  left: 50%;
+  margin-left: -50px;
+  top: 50px;
+  width: 100px;
+  height: 200px;
+  z-index: 3;
+}
+.pineapple::before, .pineapple::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.pineapple::before {
+  background: #060;
+  border-radius: 50% 0;
+  box-shadow: 30px -10px 0 0 #060, -20px -15px 0 0 #060, 10px -25px 0 0 #060, -40px -30px 0 0 #060, -10px -40px 0 0 #060, -60px -45px 0 0 #060, -30px -55px 0 0 #060;
+  top: 70px;
+  left: 10px;
+  width: 40px;
+  height: 20px;
+  transform: rotate(18deg) skew(-45deg);
+  z-index: 1;
+}
+.pineapple::after {
+  background-color: #edab3c;
+  background-image: repeating-linear-gradient(45deg, #252, #252 2px, transparent 2px, transparent 20px), repeating-linear-gradient(-45deg, #252, #252 2px, transparent 2px, transparent 20px);
+  background-size: 100% 100%;
+  border-radius: 50% 50% 35% 35%;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+}
+
+.apple .juice {
+  animation: juiceSplatLeft 0.1s 4s linear;
+  top: 55px;
+}
+.apple .juice:nth-of-type(2) {
+  animation: juiceSplatVert 0.1s 18.3s linear;
+  left: 74px;
+  opacity: 0;
+}
+
+.pineapple .juice {
+  animation: juiceSplatLeft 0.1s 11.16s linear;
+  top: 125px;
+}
+.pineapple .juice:nth-of-type(2) {
+  animation: juiceSplatRight 0.1s 11.15s linear;
+  left: 72px;
+  transform: scale(-1, 1);
+}
+
+.juice {
+  background-image: radial-gradient(5px 5px at 5px 5px, #ffaa66, #ffaa66 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), radial-gradient(5px 5px at 5px 25px, #ffaa66, #ffaa66 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0));
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  z-index: -1;
+}
+
+/* Animations */
+@keyframes showHide {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes pen1 {
+  from {
+    opacity: 0;
+    transform: translateX(-140px);
+  }
+  2%,
+  13.20375% {
+    opacity: 1;
+    transform: translateX(-140px);
+  }
+  16.20375%,
+  18.80375% {
+    transform: translateX(-140px) rotate(90deg);
+  }
+  19.20375%,
+  28.02108% {
+    opacity: 1;
+    transform: translateX(-40px) rotate(90deg);
+  }
+  29.02108% {
+    opacity: 0;
+    transform: translateX(-40px) rotate(90deg);
+  }
+  66.04215% {
+    opacity: 0;
+    transform: translateX(-40px) translateY(-100px) rotate(90deg);
+  }
+  67.04215%,
+  81.18267% {
+    opacity: 1;
+    transform: translateX(-40px) translateY(-100px) rotate(90deg);
+  }
+  83.18267%,
+  85.39813% {
+    transform: translateX(-200px) translateY(-12px) rotate(90deg);
+  }
+  85.79813%,
+  to {
+    opacity: 1;
+    transform: translateX(-135px) translateY(-12px) rotate(90deg);
+  }
+}
+@keyframes apple {
+  from,
+  7.96253% {
+    opacity: 0;
+    transform: translateX(140px);
+  }
+  9.96253%,
+  18.80375% {
+    opacity: 1;
+    transform: translateX(140px);
+  }
+  19.20375%,
+  28.02108% {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+  29.02108% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  66.04215% {
+    opacity: 0;
+    transform: translateX(100px) translateY(-100px);
+  }
+  67.04215%,
+  81.18267% {
+    opacity: 1;
+    transform: translateX(100px) translateY(-100px);
+  }
+  83.18267%,
+  85.39813% {
+    transform: translateX(-60px) translateY(-12px);
+  }
+  85.79813%,
+  to {
+    opacity: 1;
+    transform: translateX(5px) translateY(-12px);
+  }
+}
+@keyframes pen2 {
+  from,
+  33.02108% {
+    opacity: 0;
+    transform: translateX(140px);
+  }
+  35.02108%,
+  46.22482% {
+    opacity: 1;
+    transform: translateX(140px);
+  }
+  49.22482%,
+  51.82482% {
+    transform: translateX(140px) translateY(30px) rotate(90deg);
+  }
+  52.22482%,
+  61.04215% {
+    opacity: 1;
+    transform: translateX(0px) translateY(30px) rotate(90deg);
+  }
+  62.04215% {
+    opacity: 0;
+    transform: translateX(0px) translateY(30px) rotate(90deg);
+  }
+  74.00468% {
+    opacity: 0;
+    transform: translateX(0px) translateY(90px) rotate(90deg);
+  }
+  75.00468%,
+  81.18267% {
+    opacity: 1;
+    transform: translateX(0px) translateY(90px) rotate(90deg);
+  }
+  83.18267%,
+  85.39813% {
+    transform: translateX(175px) translateY(-12px) rotate(90deg);
+  }
+  85.79813%,
+  to {
+    opacity: 1;
+    transform: translateX(135px) translateY(-12px) rotate(90deg);
+  }
+}
+@keyframes pineapple {
+  from,
+  40.98361% {
+    opacity: 0;
+    transform: translateX(-140px);
+  }
+  42.98361%,
+  51.82482% {
+    opacity: 1;
+    transform: translateX(-140px);
+  }
+  52.22482%,
+  61.04215% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  62.04215% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  74.00468% {
+    opacity: 0;
+    transform: translateX(-20px) translateY(60px);
+  }
+  75.00468%,
+  81.18267% {
+    opacity: 1;
+    transform: translateX(-20px) translateY(60px);
+  }
+  83.18267%,
+  85.39813% {
+    transform: translateX(155px) translateY(-42px);
+  }
+  85.79813%,
+  to {
+    opacity: 1;
+    transform: translateX(105px) translateY(-42px);
+  }
+}
+@keyframes juiceSplatLeft {
+  from {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(3.25, 2.25);
+  }
+}
+@keyframes juiceSplatRight {
+  from {
+    opacity: 1;
+    transform: scale(-1, 1);
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(-3.25, 2.25);
+  }
+}
+@keyframes juiceSplatVert {
+  from {
+    opacity: 1;
+    transform: rotate(5deg) scale(-1, 1);
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: rotate(5deg) scale(-1, 3.5);
+  }
+}
+@keyframes showReplay {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+/* Sizing and position adjustments for viewport resizing */
+@media screen and (min-height: 420px) {
+  .pen {
+    top: 70px;
+  }
+
+  .apple {
+    top: 130px;
+  }
+
+  .pineapple {
+    top: 90px;
+  }
+}
+@media screen and (min-height: 600px) {
+  .pen {
+    top: 110px;
+  }
+
+  .apple {
+    top: 170px;
+  }
+
+  .pineapple {
+    top: 130px;
+  }
+}
+@media screen and (max-width: 420px) {
+  button {
+    font-size: 16pt;
+    line-height: 48px;
+    width: 88px;
+  }
+
+  .animation {
+    transform: scale(0.6);
+  }
+}
